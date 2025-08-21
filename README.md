@@ -1,4 +1,4 @@
-# magic-link (Minimal TypeScript Package)
+# Magic-link (Minimal TypeScript Package)
 A lightweight utility to generate and validate magic links for authentication workflows.
 Built with TypeScript, minimal dependencies, and designed for learning + experimentation.
 
@@ -13,7 +13,7 @@ Simple TypeScript-first API
 No external dependencies
 
 **Installation**
-npm install @your-username/magiclink
+```npm install @your-username/magiclink```
 
 **🚀 Usage**
 ```
