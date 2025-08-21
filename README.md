@@ -13,7 +13,10 @@ Simple TypeScript-first API
 No external dependencies
 
 **Installation**
-```npm install @your-username/magiclink```
+
+```
+npm install @your-username/magiclink
+```
 
 **🚀 Usage**
 ```
