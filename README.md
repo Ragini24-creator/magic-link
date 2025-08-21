@@ -2,23 +2,23 @@
 A lightweight utility to generate and validate magic links for authentication workflows.
 Built with TypeScript, minimal dependencies, and designed for learning + experimentation.
 
-**✨ Features**
+## ✨ Features
 
-Generate magic links with unique tokens
+**Generate magic links with unique tokens**
 
-Configurable expiry time
+**Configurable expiry time**
 
-Simple TypeScript-first API
+**Simple TypeScript-first API**
 
-No external dependencies
+**No external dependencies**
 
-**Installation**
+## Installation
 
 ```
 npm install @your-username/magiclink
 ```
 
-**🚀 Usage**
+## 🚀 Usage
 ```
 import { createMagicLink, verifyMagicLink } from "@your-username/magiclink";
 
@@ -37,3 +37,36 @@ console.log(isValid); // true / false
 
 ```
 
+## 🛠 Development
+
+Clone and install dependencies:
+
+```git clone https://github.com/your-username/magiclink.git
+cd magiclink
+npm install
+```
+
+Build the package:
+
+```
+npm run build
+```
+
+
+## ⚙️ API
+
+createMagicLink(options)
+
+email (string) → Email address of the user
+
+baseUrl (string) → Your app’s URL where user should land
+
+expiresIn (number, optional) → Expiration time in ms (default: 24h)
+
+Returns: { url: string, token: string, expiresAt: Date }
+
+## 📄 License
+
+MIT
+
+## Made with TypeScript by Ragini Kishor **
