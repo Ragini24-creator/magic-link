@@ -1,6 +1,17 @@
-# Magic-link (Minimal TypeScript Package)
+# Magic-link Authentication (Minimal TypeScript Package)
 A lightweight utility to generate and validate magic links for authentication workflows.
 Built with TypeScript, minimal dependencies, and designed for learning + experimentation.
+
+## About this project
+
+I initially wanted to build this utility **for myself** — to better understand how magic link authentication works and to have a lightweight solution I could reuse in my projects.  
+
+At the same time, I saw it as a chance to:
+- Deepen my knowledge of **TypeScript** and package development
+- Learn the process of **publishing and maintaining an NPM package**
+- Practice designing a utility that others could also benefit from
+
+This is a work in progress 🚧 — I plan to keep improving it and adding more features over time.  
 
 ## ✨ Features
 
@@ -69,4 +80,4 @@ Returns: { url: string, token: string, expiresAt: Date }
 
 MIT
 
-## Made with TypeScript by Ragini Kishor **
+## Made with TypeScript by Ragini Kishor 
