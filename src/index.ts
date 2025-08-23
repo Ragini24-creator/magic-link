@@ -1,28 +1,52 @@
-const  crypto  = require("crypto");
+import crypto from "crypto";
 
-export interface MagicLinkOptions{
-    secret:string,       //secret key to sign the token
-    baseUrl:string,      // where the link should redirect
-    expiresIn?:number,   //expiration in ms (default: 24h)
+export interface MagicLinkOptions {
+  secret: string;       // secret key used for signing
+  baseUrl: string;      // where the link should redirect
+  expiresIn?: number;   // expiration in ms (default: 24h)
 }
 
+/**
+ * Create a signed magic link
+ */
+export function createMagicLink(
+  email: string,
+  options: MagicLinkOptions
+): string {
+  const { secret, baseUrl, expiresIn = 24 * 60 * 60 * 1000 } = options;
 
-export  function createMagicLink(email:string,options:MagicLinkOptions):string{
-   const {secret,baseUrl,expiresIn = 24*60*60*1000} = options 
+  const issuedAt = Date.now();
+  const exp = issuedAt + expiresIn;
 
-  const token =  crypto.createHmac("sha256",secret).update(email + Date.now().toString()).digest("hex")
+  // Add randomness to prevent collisions
+  const nonce = crypto.randomBytes(16).toString("hex");
 
-  const expiresAt = Date.now()+ expiresIn
-  const magiclink = `${baseUrl}?token=${token}?&email=${encodeURIComponent(email)}&expire=${expiresAt}}`
-  return magiclink;
-}
-
-export function verifyMagicLink(token: string, email: string, exp: number, secret: string):boolean{
-     if (Date.now() > exp) return false; // expired
-
-       const expectedToken = crypto
+  // Token is deterministic based on email + exp + nonce
+  const token = crypto
     .createHmac("sha256", secret)
-    .update(email + (exp - (24 * 60 * 60 * 1000)).toString()) // same seed
+    .update(email + exp.toString() + nonce)
+    .digest("hex");
+
+  return `${baseUrl}?token=${token}&email=${encodeURIComponent(
+    email
+  )}&exp=${exp}&nonce=${nonce}`;
+}
+
+/**
+ * Verify a magic link’s authenticity + expiration
+ */
+export function verifyMagicLink(
+  token: string,
+  email: string,
+  exp: number,
+  nonce: string,
+  secret: string
+): boolean {
+  if (Date.now() > exp) return false; // expired
+
+  const expectedToken = crypto
+    .createHmac("sha256", secret)
+    .update(email + exp.toString() + nonce)
     .digest("hex");
 
   return expectedToken === token;

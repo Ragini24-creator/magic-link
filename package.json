@@ -1,10 +1,15 @@
 {
-  "name": "magiclink",
+  "name": "@ragini/magiclink",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A lightweight TypeScript library for generating and verifying magic links for passwordless authentication.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-node test/test.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +20,4 @@
     "typescript": "^5.9.2"
   },
   "type": "module"
-
 }
