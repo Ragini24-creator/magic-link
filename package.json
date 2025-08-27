@@ -1,21 +1,38 @@
 {
   "name": "@ragini/magic-link",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A lightweight TypeScript library for generating and verifying magic links for passwordless authentication.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "scripts": {
-    "test": "ts-node test/test.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "ts-node test/test.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "magic-link",
+    "passwordless",
+    "authentication",
+    "typescript",
+    "node"
+  ],
+  "author": "Ragini24-creator", 
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ragini24-creator/magic-link.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ragini24-creator/magic-link/issues"
+  },
+  "homepage": "https://github.com/Ragini24-creator/magic-link#readme",
   "devDependencies": {
-    "@types/node": "^24.3.0",
+    "@types/node": "^20.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
