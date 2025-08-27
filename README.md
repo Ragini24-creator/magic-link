@@ -128,7 +128,7 @@ curl -X POST http://localhost:9000/create \
 
 Click the returned link in your browser → you should see Welcome user@examplecom.
 
-##📌 Roadmap
+## 📌 Roadmap
 
 - Token expiry support
 
@@ -136,11 +136,11 @@ Click the returned link in your browser → you should see Welcome user@examplec
 
 - Examples with Next.js & React 
 
-##🤝 Contributing
+## 🤝 Contributing
 
 PRs, issues, and discussions welcome!
 
-##📄 License
+## 📄 License
 
 MIT © 2025 Ragini Kishor
 
