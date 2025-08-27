@@ -1,5 +1,5 @@
 {
-  "name": "@ragini/magiclink",
+  "name": "magic-link-utils",
   "version": "1.0.0",
   "description": "A lightweight TypeScript library for generating and verifying magic links for passwordless authentication.",
   "main": "./dist/index.js",
