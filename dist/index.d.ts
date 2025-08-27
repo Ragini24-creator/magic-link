@@ -1,3 +1,4 @@
+export { magicLinkMiddleware } from "./middleware.js";
 export interface MagicLinkOptions {
     secret: string;
     baseUrl: string;

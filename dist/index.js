@@ -1,4 +1,5 @@
 import crypto from "crypto";
+export { magicLinkMiddleware } from "./middleware.js";
 /**
  * Create a signed magic link
  */
