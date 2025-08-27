@@ -36,7 +36,7 @@ This package is **still evolving 🚧** — new features will be added gradually
 ## 📦 Installation
 
 ```bash
-npm install @your-username/magiclink
+npm install @ragini/magiclink
 ```
 
 ## 🚀 Usage
@@ -81,3 +81,69 @@ app.get("/auth", magicLinkMiddleware(SECRET), (req, res) => {
 app.listen(3000, () => console.log("✅ Server running on http:/localhost:3000"));
 
 ```
+
+## 📌 How It Works
+
+- Client sends an email to /create.
+
+- Server responds with a magic link.
+
+- User clicks the link → redirected to /auth.
+
+- magicLinkMiddleware validates it and grants access.
+
+## 🔑 Environment Variables
+
+Make sure you set these in your .env file:
+
+```bash 
+
+SECRET=your-secret-key
+BASE_URL=http://localhost:9000/auth
+
+```
+
+## 🛠 API Reference
+createMagicLink(email: string, options: { secret: string, baseUrl: string })
+
+- Generates a signed magic link for the given email.
+
+magicLinkMiddleware(secret: string)
+
+- Express middleware that validates magic links.
+- If valid → attaches req.magicUser and calls next().
+
+##🧪 Testing It Locally
+```bash
+
+# Run the server
+npm run dev
+
+# In another terminal, send a request
+curl -X POST http://localhost:9000/create \
+  -H "Content-Type: application/json" \
+  -d '{"email":"user@example.com"}'
+
+```
+
+Click the returned link in your browser → you should see Welcome user@examplecom.
+
+##📌 Roadmap
+
+- Token expiry support
+
+- Integration with Nodemailer (send link via email)
+
+- Examples with Next.js & React 
+
+##🤝 Contributing
+
+PRs, issues, and discussions welcome!
+
+##📄 License
+
+MIT © 2025 Ragini Kishor
+
+## Author
+👩‍💻 [Ragini Kishor](https://github.com/Ragini24-creator)
+
