@@ -1,4 +1,6 @@
 import crypto from "crypto";
+export { magicLinkMiddleware } from "./middleware.js";
+
 
 export interface MagicLinkOptions {
   secret: string;       // secret key used for signing
@@ -51,3 +53,8 @@ export function verifyMagicLink(
 
   return expectedToken === token;
 }
+
+
+
+
+
