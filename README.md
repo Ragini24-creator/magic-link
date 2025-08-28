@@ -42,7 +42,7 @@ Use at your own risk, and double-check security practices before deploying in cr
 ## 📦 Installation
 
 ```bash
-npm install @ragini/magiclink
+npm install @rkdev3/magiclink
 ```
 
 ## 🚀 Usage
