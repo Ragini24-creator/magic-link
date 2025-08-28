@@ -23,6 +23,12 @@ This package is **still evolving 🚧** — new features will be added gradually
 
 ---
 
+## ⚠️ Disclaimer
+
+This package was built primarily for learning and experimentation. While it works, it may not be fully production-ready.
+Use at your own risk, and double-check security practices before deploying in critical systems.
+
+
 ## ✨ Features
 
 - 🔑 Generate magic links with **unique tokens**
