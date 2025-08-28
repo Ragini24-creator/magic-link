@@ -1,7 +1,7 @@
 # 🔑 Magic-link Authentication (Minimal TypeScript Package)
 
-[![npm version](https://img.shields.io/npm/v/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink)
-[![npm downloads](https://img.shields.io/npm/dt/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink)
+<!-- [![npm version](https://img.shields.io/npm/v/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink)
+[![npm downloads](https://img.shields.io/npm/dt/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink) -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?logo=typescript)
 
@@ -22,6 +22,9 @@ Along the way, I wanted to:
 This package is **still evolving 🚧** — new features will be added gradually.
 
 ---
+
+## ⚠️ Disclaimer
+This package was built primarily for learning and experimentation. While it works, it may not be fully production-ready. Use at your own risk, and double-check security practices before deploying in critical systems.
 
 ## ✨ Features
 
