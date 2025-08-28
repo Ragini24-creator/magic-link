@@ -142,8 +142,7 @@ PRs, issues, and discussions welcome!
 
 ## 📄 License
 
-MIT © 2025 Ragini Kishor
+MIT © 2025 Ragini K
 
-## Author
-👩‍💻 [Ragini Kishor](https://github.com/Ragini24-creator)
+
 
