@@ -54,7 +54,7 @@ Here’s a minimal Express.js example showing how to create and validate magic l
 ```bash
 import express from "express";
 import dotenv from "dotenv";
-import { createMagicLink, magicLinkMiddleware } from "@ragini/magic-link";
+import { createMagicLink, magicLinkMiddleware } from "@rkdev3/magic-link";
 
 const app = express();
 app.use(express.json());
