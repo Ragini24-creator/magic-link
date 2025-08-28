@@ -1,7 +1,7 @@
 # 🔑 Magic-link Authentication (Minimal TypeScript Package)
 
-[![npm version](https://img.shields.io/npm/v/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink)
-[![npm downloads](https://img.shields.io/npm/dt/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink)
+<!--[![npm version](https://img.shields.io/npm/v/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink)
+[![npm downloads](https://img.shields.io/npm/dt/@your-username/magiclink)](https://www.npmjs.com/package/@your-username/magiclink) -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?logo=typescript)
 
